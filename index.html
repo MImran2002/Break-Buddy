@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mental Health Toolkit Add-on</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="main-page">
+    <h1>Mental Health Toolkit</h1>
+    <div id="gamification">
+        <p>🏆 Points: <span id="points">0</span></p>
+        <ul id="achievements"></ul>
+    </div>
+    <button id="btn-white-noise">White Noise</button>
+    <button id="btn-meditation">Meditation</button>
+    <button id="btn-pomodoro">Pomodoro</button>
+  </div>
+
+  <div id="white-noise-page" style="display:none">
+    <h2>White Noise Player</h2>
+    <select id="white-noise-select">
+      <option value="">Select white noise...</option>
+      <option value="white-noise/rain.mp3">Rain</option>
+      <option value="white-noise/beach.mp3">Beach</option>
+      <option value="white-noise/forest.mp3">Forest</option>
+    </select>
+    <input type="file" id="white-noise-upload" accept="audio/*">
+    <audio id="audio-player" controls></audio>
+    <button class="btn-back">Back</button>
+  </div>
+
+  <div id="meditation-page" style="display:none">
+    <h2>Meditation Activities</h2>
+    <button id="meditate-walk">Take a Walk</button>
+    <button id="meditate-breathe">Breathe In / Out</button>
+    <button class="btn-back">Back</button>
+  </div>
+
+  <div id="pomodoro-page" style="display:none">
+    <h2>Pomodoro Timer</h2>
+    <label for="pomodoro-duration">Duration (min):</label>
+    <input type="number" id="pomodoro-duration" value="25">
+    <button id="start-pomodoro">Start</button>
+    <p id="pomodoro-display">25:00</p>
+    <button class="btn-back">Back</button>
+  </div>
+  <div class="chatbox">
+    <div class="chat-messages" id="chatMessages"></div>
+    <div class="chat-input">
+        <input type="text" id="chatInput" placeholder="Ask something..." />
+        <button id="chatSend">Send</button>
+    </div>
+  </div>
+  <script src="interface.js"></script>
+</body>
+</html>
